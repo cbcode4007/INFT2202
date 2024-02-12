@@ -1,3 +1,11 @@
+/*
+*  Name:        Colin Bond
+*  Date:        2024-02-12
+*  File:        nav.js
+*
+*  Description: A DOM Manipulation file included in all of Lab 1's HTML files in order to provide them each with common nav bars.
+*/
+
 
 // Inject body copy text into HTML file
 
@@ -34,12 +42,12 @@ document.write('</div>');
 document.write('</nav>');
 
 
-// 3b.) Change Products navbar link to Interests
+// Lab 1 Step 3b.) Change Products navbar link to Interests
 
 document.getElementById("nav-a-products").innerHTML = "Interests";
 
 
-// 3c.) Add Human Resources link between About Us and Contact Us
+// Lab 1 Step 3c.) Add Human Resources link between About Us and Contact Us
 
 // Create the list item element for "Human Resources"
 var newNavItem = document.createElement('li');
@@ -51,15 +59,16 @@ newNavLink.setAttribute('id', 'nav-a-hresources');
 newNavLink.setAttribute('class', 'nav-link');
 newNavLink.setAttribute('href', '#'); // Set the appropriate href attribute
 
-// Create the Font Awesome icon
+// Create appropriate Font Awesome icon
 var icon = document.createElement('i');
-icon.setAttribute('class', 'fa fa-users'); // Assuming you have Font Awesome linked in your HTML
+icon.setAttribute('class', 'fa-solid fa-users'); // Assuming you have Font Awesome linked in your HTML
 
 // Text for the link
 var textNode = document.createTextNode('Human Resources');
 
 // Append the icon and text to the anchor element
 newNavLink.appendChild(icon);
+// newNavLink.appendChild(icon);
 newNavLink.appendChild(textNode);
 
 // Append the anchor element to the list item
@@ -72,7 +81,7 @@ var aboutUsNavItem = document.getElementById('nav-li-about');
 aboutUsNavItem.parentNode.insertBefore(newNavItem, aboutUsNavItem.nextSibling);
 
 
-// 3d.) Add another, fixed bottom Navbar
+// Lab 1 Step 3d.) Add another, fixed bottom Navbar
 
 // Create the navbar element
 var bottomNavbar = document.createElement('nav');

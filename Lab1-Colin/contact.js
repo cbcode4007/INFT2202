@@ -1,5 +1,13 @@
+/*
+*  Name:        Colin Bond
+*  Date:        2024-02-12
+*  File:        contact.js
+*
+*  Description: A DOM Manipulation file included in Lab 1's contact.html to provide its content using JavaScript.
+*/
 
-// 4. Contact HTML Form with JavaScript event listening and handling
+
+// Lab 1 Step 4. Contact HTML Form with JavaScript event listening and handling
 
 // Inject body copy text into HTML file
 document.write('<div class="container my-5">');
@@ -19,7 +27,6 @@ document.write('<textarea id="message" name="message" required></textarea><br>')
 document.write('<button type="submit" id="submitBtn">Submit</button>');
 document.write('</form>');
 document.write('</p>');
-
 
 // Function to handle form submission
 function handleSubmit(event) {

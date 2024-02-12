@@ -1,7 +1,11 @@
+/*
+*  Name:        Colin Bond
+*  Date:        2024-02-12
+*  File:        index.js
+*
+*  Description: A DOM Manipulation file included in Lab 1's index.html to provide its content using JavaScript.
+*/
 
-// Select the page on Navbar
-const element = document.getElementById("nav-li-index");
-element.classList.add("active");
 
 // Inject body copy text into HTML file
 document.write('<div class="container my-5">');

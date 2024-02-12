@@ -1,3 +1,11 @@
+/*
+*  Name:        Colin Bond
+*  Date:        2024-02-12
+*  File:        products.js
+*
+*  Description: A DOM Manipulation file included in Lab 1's products.html to provide its content using JavaScript.
+*/
+
 
 // Inject body copy text into HTML file
 document.write('<div class="container my-5">');
