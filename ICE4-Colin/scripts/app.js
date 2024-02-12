@@ -30,37 +30,38 @@ $(function () {
 /**
  * fuction to demo adding content with .text() and .html()
  *  */
-// $(function () {
+$(function () {
 
-    // let navDiv = $("div:first");
-    // console.log(navDiv.html())
-    // console.log(navDiv.text())
+    let navDiv = $("div:first");
+    console.log(navDiv.html())
+    console.log(navDiv.text())
 
-    // let contentDiv = $("#content-div");
-    // console.log(contentDiv.html())
-    // console.log(contentDiv.text())
+    let contentDiv = $("#content-div");
+    console.log(contentDiv.html())
+    console.log(contentDiv.text())
 
     // text to use with new paragraph
-    // text = "It is one of his best works!"
+    let text = "It is one of his best works!"
     // create a paragraph
-    // let newP = $("<p></p>");
+    let newP = $("<p></p>");
     // TO DO: add text with html()
+    newP.html(text);
 
     // append to contentDiv
+    $(contentDiv).append(newP);
 
     // add text
-    // newP.text("I am very excited for the opening of the new adaptation of his work.");
+    newP.text("I am <strong>very excited</strong> for the opening of the new adaptation of his work.");
     // TO DO: test when very excited is in a strong tag
 
     // TO DO: append to newP text
-
-// });
+    $(contentDiv).append(newP);
+});
 
 /**
  * function to demo adding toggle to button
  *  */
 $(function () {
-    console.log("hi");
     // TO DO: complete the function
     // get the button
     var button = document.getElementById("button-p-toggle");
@@ -95,9 +96,9 @@ $(function () {
 // TO DO: import form validation functions with alias
 
 // if the submit button is on the page
-// if ($("#btnRegSubmit")) {
+if ($("#btnRegSubmit")) {
     // TO DO: add a click function that calls a callack function
-    // $("#btnRegSubmit").click(function (e) {
+    $("#btnRegSubmit").click(function (e) {
         // prevent the default submit action (stay on the page)
 
         // create a new user
@@ -126,8 +127,8 @@ $(function () {
 
         // validate confirm password
 
-// });
-// }
+    });
+}
 
 // TO DO: if reset button present
 
