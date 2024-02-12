@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script
+			src="https://code.jquery.com/jquery-3.6.3.min.js"
+			integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+			crossorigin="anonymous"
+		></script>
+
+		<link
+			rel="stylesheet"
+			href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
+		<link rel="import" href="navbar.html" />
+		<title>Document</title>
+	</head>
+	<body>
+		<!-- create the nav bar with jquery -->
+		<div id="nav-holder"></div>
+		<h2>Do you like mystery stories?</h2>
+		<div id="content-div">
+			<p>
+				Check out this excerpt from a classic Sherlock Holmes mystery:
+			</p>
+			<div id="excerpt">
+				<p id="speckled-excerpt">
+					"The building was of grey, lichen-blotched stone, with a
+					high central portion and two curving wings, like the claws
+					of a crab, thrown out on each side. In one of these wings
+					the windows were broken and blocked with wooden boards,
+					while the roof was partly caved in, a picture of ruin. The
+					central portion was in little better repair, but the
+					right-hand block was comparatively modern, and the blinds in
+					the windows, with the blue smoke curling up from the
+					chimneys, showed that this was where the family resided.
+					Some scaffolding had been erected against the end wall, and
+					the stone-work had been broken into, but there were no signs
+					of any workmen at the moment of our visit. Holmes walked
+					slowly up and down the ill-trimmed lawn and examined with
+					deep attention the outsides of the windows.""
+				</p>
+			</div>
+			<p id="speckled-citation">
+				An excerpt from Arthur Conan Doyle's
+				<a
+					id="link"
+					title="The Adventure of the Speckled Band on Wikipedia"
+					href="https://en.wikipedia.org/wiki/The_Adventure_of_the_Speckled_Band"
+					>The Adventure of the Speckled Band</a
+				>
+			</p>
+		</div>
+		<!-- TO DO: create a div with a p followed by a button that will toggle the p in the div -->
+		
+
+		<!-- import the scripts -->
+		<script type="module" src="./scripts/app.js"></script>
+		<script type="module" src="./scripts/user.js"></script>
+		<script type="module" src="./scripts/form.js"></script>
+	</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script
+			src="https://code.jquery.com/jquery-3.6.3.min.js"
+			integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+			crossorigin="anonymous"
+		></script>
+
+		<link
+			rel="stylesheet"
+			href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="nav-holder"></div>
+		<h2>Now Here's a Form!</h2>
+		<p>Can you use this form?</p>
+
+		<!-- A form element without class or ID  -->
+
+		<form id="registration-form">
+			<!-- form group for first name entry -->
+			<div class="form-group" id="first-group">
+				<label for="inputFirst">First Name</label>
+				<input
+					type="text"
+					class="form-control"
+					id="inputFirst"
+					placeholder="First name"
+					required
+				/>
+				<div class="errorMessage"></div>
+			</div>
+
+			<!-- form group for last name entry -->
+			<div class="form-group" id="last-group">
+				<label for="inputLast">Last Name</label>
+				<input
+					type="text"
+					class="form-control"
+					id="inputLast"
+					placeholder="Last name"
+					required
+				/>
+				<div class="errorMessage"></div>
+			</div>
+
+			<!-- form group for username entry -->
+			<div class="form-group" id="username-group">
+				<label for="inputUsername">Username</label>
+				<input
+					type="text"
+					class="form-control"
+					id="inputUsername"
+					placeholder="Username"
+					required
+				/>
+				<div class="errorMessage"></div>
+			</div>
+			<!-- form group for email entry -->
+			<div class="form-row">
+				<div class="form-group col-md-6" id="email-group">
+					<label for="inputEmail">Email</label>
+					<input
+						type="email"
+						class="form-control"
+						id="inputEmail"
+						placeholder="Email"
+						required
+					/>
+					<div class="errorMessage"></div>
+				</div>
+				<!-- form group for password 1 entry -->
+				<div class="form-group col-md-6" id="pass1-group">
+					<label for="inputPassword">Password</label>
+					<input
+						type="password"
+						class="form-control"
+						id="inputPassword"
+						placeholder="Password"
+						required
+					/>
+					<div class="errorMessage"></div>
+				</div>
+				<!-- form group for password 2 entry -->
+				<div class="form-group col-md-6" id="pass2-group">
+					<label for="inputPassword2">Confirm Password</label>
+					<input
+						type="password"
+						class="form-control"
+						id="inputPassword2"
+						placeholder="Password Again"
+						required
+					/>
+					<div class="errorMessage"></div>
+				</div>
+			</div>
+			<!-- submit button -->
+			<button type="submit" class="btn btn-primary" id="btnRegSubmit">
+				Register
+			</button>
+			<!-- TO DO: reset button  -->
+			
+		</form>
+		<!-- import scripts as modules  -->
+		<script type="module" src="./scripts/app.js"></script>
+		<script type="module" src="./scripts/user.js"></script>
+		<script type="module" src="./scripts/form.js"></script>
+	</body>
+</html>

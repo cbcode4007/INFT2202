@@ -1,0 +1,165 @@
+html {
+  min-height: 100%;
+  background-color: #212529;
+  color: #edede9;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
+  padding: 20px;
+  background-color: #212529;
+  color: #edede9;
+}
+
+.nav-link {
+  color: #a3cef1;
+}
+
+.clear {
+  clear: both;
+}
+
+#content {
+  overflow: auto;
+  width: 80%;
+  background-color: #fff;
+  margin: 30px auto 0 auto;
+  padding: 20px 30px;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+}
+
+h1 {
+  color: #000;
+}
+
+h2 {
+  border-bottom: 1px solid #aaa;
+}
+
+#excerpt {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.asp-image {
+  max-height: 200px;
+  float: left;
+  ;
+}
+
+#speckled-excerpt {
+  font-family: 'IM Fell DW Pica', serif;
+  margin: 0 40px 40px 40px;
+}
+
+#speckled-citation {
+  text-align: right;
+}
+
+.gallery {
+  height: fit-content;
+  width: fit-content;
+  display: contents;
+}
+
+.gallery img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%
+}
+
+#registration-form {
+  max-width: 500px;
+}
+
+#inputProv {
+  margin: 8px;
+}
+
+
+fieldset {
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+label {
+  display: inline-block;
+  min-width: 100px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+  margin: 8px;
+  padding: 6px 12px;
+  outline: none;
+  border: 1px solid #666;
+  border-radius: 4px;
+  box-shadow: inset 0 0 3px 3px #fafafa;
+}
+
+input[type="submit"] {
+  font-family: "Trebuchet MS", Verdana, Arial, sans-serif;
+  font-size: 16px;
+  padding: 4px 8px;
+  background-color: #fcfcfc;
+  box-shadow: 0 0 1px 0 #aaa;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+input[type="submit"]:hover {
+  background-color: #f4f4f4;
+  box-shadow: 0 0 1px 0 #ccc;
+}
+
+#btnRegReset,
+#btnRegSubmit {
+  border-radius: 10px;
+  background-color: #aaa;
+  color: #212529;
+  line-height: 1.5;
+  padding: 5px;
+  margin: 5px;
+  min-width: 125px;
+}
+
+.toggleDiv {
+  height: 50px;
+}
+
+.toggleShow {
+  display: block;
+}
+
+.toggleHide {
+  display: none;
+}
+
+
+/* creates the expanding underline when user hovers over a link */
+.fancy-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #a3cef1;
+}
+
+.fancy-link:after {
+  display: block;
+  content: '';
+  border-bottom: solid 1px #a3cef1;
+  transform: scaleX(0.0001);
+  transition: transform 250ms ease-in-out;
+}
+
+.fancy-link:hover:after {
+  transform: scaleX(1);
+}
