@@ -46,7 +46,7 @@ function handleSubmit(event) {
 
     // Start timer to redirect after 3 seconds
     setTimeout(function() {
-        window.location.href = "index.html"; // Redirect to home page
+        window.location.href = "../content/index.html"; // Redirect to home page
     }, 3000);
 }
 

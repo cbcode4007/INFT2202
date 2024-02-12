@@ -3,7 +3,7 @@
 *  Date:        2024-02-12
 *  File:        nav.js
 *
-*  Description: A DOM Manipulation file included in all of Lab 1's HTML files in order to provide them each with common nav bars.
+*  Description: A DOM Manipulation file included in all of Lab 1's HTML files in order to provide them each with common nav bars and other content.
 */
 
 
