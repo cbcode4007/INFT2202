@@ -24,7 +24,8 @@ export class User {
      * @returns {string}
      */
     displayUser() {
-         return `Name: ${this.firstName}${this.lastName}
+         return `
+         Name: ${this.firstName} ${this.lastName}
          Username: ${this.username}
          Email: ${this.email}
          Password: ${this.password}`
