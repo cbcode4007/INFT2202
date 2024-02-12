@@ -1,13 +1,12 @@
 console.log('app.js loaded')
 // TO DO: load the user class script with alias
-
-
+import { User as user } from "./user.js";
 
 /**
  * iffe to insert nav bar at the top of each page
  */
 $(function () {
-    let navBar = `<div class="naviation">
+    let navBar = `<div class="navigation">
 	                <nav class="nav">
 		                <a class="nav-link active" href="index.html">Home</a>
 		                <a class="nav-link" href="slideshow.html">Slideshow</a>
@@ -17,7 +16,7 @@ $(function () {
                 </div>`
 
     //TO DO: replace the nav-holder
-
+    $('#nav-holder').append(navBar);
 });
 
 /**
@@ -60,19 +59,35 @@ $(function () {
 /**
  * function to demo adding toggle to button
  *  */
-// $(function () {
+$(function () {
+    console.log("hi");
     // TO DO: complete the function
     // get the button
+    var button = document.getElementById("button-p-toggle");
+
     // add a click function
+    button.addEventListener('click', function() {;
         // get the parent div's p tags
+        let ptags = $(button).parent('div').children('p');
+
         // for each p in the div
+        ptags.each(function(index, p) {
+            // get the class of the current p tag
+            let currentClass = $(p).attr('class');            
             // if it has toggleHide class
+            if (currentClass === 'toggleHide') {
                 //remove toggleHide class and add toggleShow class
                 // styling is controlled in the css
+                $(p).attr('class', 'toggleShow');
+            }
             // otherwise assume it has the toggleShow class
-                //remove toggleShow and add toggleHide
-
-//  });
+            else {
+                //remove toggleShow and add toggleHide                
+                $(p).attr('class', 'toggleHide');
+            }
+        });
+    });
+});
 
 
 
