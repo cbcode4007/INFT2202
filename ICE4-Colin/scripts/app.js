@@ -135,82 +135,99 @@ if ($("#btnRegSubmit")) {
 
         // error message paragraph        
         // create a paragraph
-        let errors = "";
+        let errors = '<p id=error></p>'
+        // append paragraph to form
+        $('#registration-form').append(errors);
+        // clear paragraph contents each submission
+        document.getElementById("error").innerHTML = "<p></p>";
 
         // validate first name
-        errors += lengthFirst(firstName);
+        document.getElementById("error").innerHTML += lengthFirst(firstName)        
 
         // validate last name
-        errors += lengthLast(lastName);
+        document.getElementById("error").innerHTML += lengthLast(lastName);
 
         // validate  username
-        errors += lengthUsername(username);
+        document.getElementById("error").innerHTML += lengthUsername(username);
 
         // validate email
-        errors += lengthEmail(email);
+        document.getElementById("error").innerHTML += lengthEmail(email);
 
         // validate confirm password
-        errors += matchPasswords(password, confirmPassword);
-        
-        // add paragraph to form
-        $('#registration-form').append(errors);
+        document.getElementById("error").innerHTML += matchPasswords(password, confirmPassword);                        
     });
 }
 
 // TO DO: if reset button present
-
+if ($("#btnRegReset")) {
     // bind a click event handler
-
+    $("#btnRegReset").click(function (e) {
         // clear out all error message paragraphs
-
-
+        if (document.getElementById("error").innerHTML != null) {
+            document.getElementById("error").innerHTML = "<p></p>";
+        }        
+    });
+}
 
 
 // SLIDESHOW
 // TO DO: if there's a gallery class on the page
+if ($(".gallery")) {
 
-    // call a callback function to handle the galler rotation
-
+    // call a callback function to handle the gallery rotation
+    $(".gallery").click(function (e) {
 
         // get the image tag
+        let galleryImage = $("img");
+
         // get a list of your images
-        // let images = [
-        //     "./images/portraits/portrait-01.jpg",
-        //     "./images/portraits/portrait-02.jpg",
-        //     "./images/portraits/portrait-03.jpg",
-        //     "./images/portraits/portrait-04.jpg",
-        //     "./images/portraits/portrait-05.jpg",
-        //     "./images/portraits/portrait-06.jpg",
-        //     "./images/portraits/portrait-07.jpg",
-        //     "./images/portraits/portrait-08.jpg",
-        //     "./images/portraits/portrait-09.jpg",
-        //     "./images/portraits/portrait-10.jpg",
-        //     "./images/portraits/portrait-11.jpg",
-        //     "./images/portraits/portrait-12.jpg",
-        //     "./images/portraits/portrait-13.jpg",
-        //     "./images/portraits/portrait-14.jpg",
-        //     "./images/portraits/portrait-15.jpg",
-        //     "./images/portraits/portrait-16.jpg",
-        //     "./images/portraits/portrait-17.jpg",
-        //     "./images/portraits/portrait-18.jpg",
+        let images = [
+            "./images/portraits/portrait-01.jpg",
+            "./images/portraits/portrait-02.jpg",
+            "./images/portraits/portrait-03.jpg",
+            "./images/portraits/portrait-04.jpg",
+            "./images/portraits/portrait-05.jpg",
+            "./images/portraits/portrait-06.jpg",
+            "./images/portraits/portrait-07.jpg",
+            "./images/portraits/portrait-08.jpg",
+            "./images/portraits/portrait-09.jpg",
+            "./images/portraits/portrait-10.jpg",
+            "./images/portraits/portrait-11.jpg",
+            "./images/portraits/portrait-12.jpg",
+            "./images/portraits/portrait-13.jpg",
+            "./images/portraits/portrait-14.jpg",
+            "./images/portraits/portrait-15.jpg",
+            "./images/portraits/portrait-16.jpg",
+            "./images/portraits/portrait-17.jpg",
+            "./images/portraits/portrait-18.jpg"
+        ];
 
-        // ]
-
-
-
-        // set a first index
+        // set a first index and the default image to first image
+        let currentIndex = 0;
+        $(this).attr("src", images[currentIndex]);
 
         // call the setInterval method that will re-call this method at a set interval
-
+        let intervalId = setInterval(function () {
             // increment the image index but no greater than how many images you have
+            currentIndex = (currentIndex + 1) % images.length;
 
             // fade out the current image
-
+            galleryImage.fadeOut(500, function () {
                 // $(this) refers to the object that calls the callback or in this case galleryImage
                 // change the src attribute of the image
+                $(this).attr("src", images[currentIndex]);
 
                 // fade it back in
+                $(this).fadeIn(500);
+            });
 
-                // debug statement
+            // debug statement
+            console.log("Switched to image: " + images[currentIndex]);
+        }, 3000); // set the time for more than how long the fade out and in process will take or you won't get the images you expect
 
-            //set the time for more than how long the fade out and in process will take or you won't get the images you expect
+        // stop the interval when user clicks on the gallery to prevent multiple intervals running
+        $(this).click(function () {
+            clearInterval(intervalId);
+        });
+    });
+}
