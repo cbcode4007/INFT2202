@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Colin Lab 2 Register</title>    
+    <link rel="stylesheet" href="../css/app.css">
+  </head>
+  <body>    
+    <script src="../scripts/nav.js"></script>
+    <div class="container my-5" id="contentDiv">
+        <h1>Register</h1>
+        <div class="col-lg-8 px-0">
+          <hr class="col-1 my-4">          
+          <form class="form-signin">
+            <input type="text" id="inputFirst" class="form-control" placeholder="First Name" required autofocus>
+            <input type="text" id="inputLast" class="form-control" placeholder="Last Name" required>
+            <input type="text" id="inputUsername" class="form-control" placeholder="Username" required>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email" required>            
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            <input type="password" id="inputPassword2" class="form-control" placeholder="Confirm Password" required>
+            <button class="btn btn-lg btn-primary btn-block" type="submit" id="btnRegSubmit">Register</button>
+          </form>
+          <p class="text-center">Already have an account? <a href="login.html">Sign in</a></p>
+        </div>
+      </div>
+      
+    <script type="module" src="../scripts/form.js"></script>
+    <script type="module" src="../scripts/user.js"></script>
+    <script type="module" src="../scripts/register.js"></script>    
+  </body>
+</html>
