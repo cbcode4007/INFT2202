@@ -1,8 +1,18 @@
+/*
+*  Name:        Colin Bond
+*  Date:        2024-03-12
+*  File:        blog.js
+*
+*  Description: A DOM Manipulation file included in Lab 3's blog.html to provide its content using JavaScript.
+*/
 
-document.write('<div id="posts-container" class="container my-5">');
+
+// Inject body copy text into HTML file
+document.write('<div class="container my-5">');
 document.write('<h1>Blog</h1>');
-document.write('<div class="col-lg-8 px-0">');
 document.write('<hr class="col-1 my-4">');
+document.write('</div>');
+document.write('<div id="posts-container" class="flex-container">');
 document.addEventListener("DOMContentLoaded", function() {
     fetch('https://jsonplaceholder.typicode.com/posts')
     .then(response => response.json())
@@ -10,10 +20,14 @@ document.addEventListener("DOMContentLoaded", function() {
         const postsContainer = document.getElementById('posts-container');
         posts.slice(0, 20).forEach(post => {
             const postElement = document.createElement('div');
-            postElement.classList.add('post');
             postElement.innerHTML = `
-                <h2 class="post">${post.title}</h2>
-                <p class="post">${post.body}</p>
+            <div class="card flex-item">
+                <img class="card-img-top" src="..." alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">${post.title}</h5>
+                    <p class="card-text">${post.body}</p>
+                </div>
+            </div>
             `;
             postsContainer.appendChild(postElement);
         });

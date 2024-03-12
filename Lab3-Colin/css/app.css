@@ -21,3 +21,16 @@ body {
     font-size: 1rem;
     line-height: 1.5;
 }
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flex-item {
+    flex-basis: auto;
+    margin: auto; 
+    margin-bottom: 20px;
+    width: 1300px;
+}
