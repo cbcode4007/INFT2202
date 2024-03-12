@@ -26,6 +26,8 @@ document.write('</li>');
 document.write('<li id="nav-li-services" class="nav-item">');
 document.write('<a id="nav-a-services" class="nav-link" href="services.html">Services</a>');
 document.write('</li>');
+document.write('<li id="nav-li-blog" class="nav-item">');
+document.write('<a id="nav-a-blog" class="nav-link" href="blog.html">Blog</a>');
 document.write('<li id="nav-li-about" class="nav-item">');
 document.write('<a id="nav-a-about" class="nav-link" href="about.html">About Us</a>');
 document.write('</li>');
