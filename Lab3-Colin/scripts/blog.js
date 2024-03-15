@@ -1,5 +1,5 @@
 /*
-*  Name:        Colin Bond
+*  Name:        Colin Bond (100867475)
 *  Date:        2024-03-15
 *  File:        blog.js
 *
